@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+  <title>Cadastro de Newslatter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs...in.js"; integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+</head>
+
+
+<style>
+  .bcontent {
+      margin-top: 100px;
+  }
+
+
+  .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+</style>
+<style>
+body {
+  background-image: url("fundo2.jpg");
+}
+</style>
+<img src="logo.png" height="200" width="200">
+<title>Cadastro</title>
+
+<body>
+<center><h1> <font face="Britannic">Cadastro de Newslatter</h1></center>
+<center>
+<hr size="10">
+
+<label font face="Arial">Nome:</label>
+<input type="text">
+<label font face="Arial">Sobrenome:</label>
+<input type="text"></br></br>
+<label font face="Arial">CPF:</label>
+<input type="text">
+<label font face="Arial">Idade:</label>
+<input type="text">
+       <script>
+                $(document).ready(function() {
+                    function limpa_formulário_cep() {         
+                    $("#rua").val("");
+                    $("#bairro").val("");
+                    $("#cidade").val("");
+                    $("#uf").val("");
+                    $("#ibge").val("");
+                }
+
+                $("#cep").blur(function() {
+                    var cep = $(this).val().replace(/\D/g, '');
+
+                    if (cep != "") {
+
+                        var validacep = /^[0-9]{8}$/;
+                        if(validacep.test(cep)) {
+                            $("#rua").val("...");
+                            $("#bairro").val("...");
+                            $("#cidade").val("...");
+                            $("#uf").val("...");
+                            $("#ibge").val("...");
+                            $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+    
+                                if (!("erro" in dados)) {
+                                    $("#rua").val(dados.logradouro);
+                                    $("#bairro").val(dados.bairro);
+                                    $("#cidade").val(dados.localidade);
+                                    $("#uf").val(dados.uf);
+                                    $("#ibge").val(dados.ibge);
+                                }
+                                else {
+                                 
+                                    limpa_formulário_cep();
+                                    alert("CEP não encontrado.");
+                                }
+                            });
+                        }
+                        else {
+                        
+                            limpa_formulário_cep();
+                            alert("Formato de CEP inválido.");
+                        }
+                    } 
+                    else {
+                       
+                        limpa_formulário_cep();
+                    }
+                });
+            });
+    
+        </script>
+        </head>
+    
+        <body>
+            <form method="get" name="frmCEP" action="."></br></br>
+            <label>CEP:
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" /></label><br />
+            <label>Rua:
+            <input name="rua" type="text" id="rua" size="60" /></label><br/>
+            <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40" /></label><br/>
+            <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40" /></label><br/>
+            <label>Estado:
+            <input name="uf" type="text" id="uf" size="2" /></label><br/></br>
+            <label>IBGE:
+            <input name="ibge" type="text" id="ibge" size="8" /></label>
+
+              </form>
+        </body>
+    
+        </html>
+
+<div class="container bcontent">
+  <h1> <font face="Britannic">Escolha seu Projeto</h1>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" id="botao1" type="button" data-toggle="dropdown">
+              Arte Gráfica
+            </button>
+            <div class="dropdown-menu" id="grafica">
+                <a class="dropdown-item" href="#">Cartão de Visita</a>
+                <a class="dropdown-item" href="#">Panfleto</a>
+                <a class="dropdown-item" href="#">Folder</a>
+                <a class="dropdown-item" href="#">Tags</a>
+                <a class="dropdown-item" href="#">Fotos</a>
+            </div>
+            
+          
+        </div>
+    </div>
+  </div>
+
+
+<div class="container bcontent">
+  <div class="jumbotron">
+      <h1> <font face="Gill Sans">Olá, Você conhece a SamGrafic Designer?</h1>
+      <p class="lead">A SamGrafic Designer é um sonho sendo construido aos poucos, a idealização de uma vida em formato criativo, onde eu pude finalmente expressar todo meu desejo de criar e dar vida a ideia de muitas pessoas!</p>
+      <hr>
+      <a class="btn btn-success btn-lg" href="https://www.instagram.com/samgrafic_designer/" role="button" color="pink">Saiba Mais</a>
+  </div>
+</div>
+
+<div class="container bcontent">
+  <h1> <font face="Britannic"> Modelos de Logotipos</h1>
+  <hr/>
+  <div id="carouselExample" class="carousel slide" data-ride="carousel">
+      <!--Carousel Indicators-->
+      <ol class="carousel-indicators">
+          <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExample" data-slide-to="1"></li>
+          <li data-target="#carouselExample" data-slide-to="2"></li>
+          <li data-target="#carouselExample" data-slide-to="3"></li>
+      </ol>
+      <!--Carousel Slides-->
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="logo2.jpg" width="1100" height="600" alt="NSSantos">
+          </div>
+          <div class="carousel-item">
+              <img src="logo3.jpg" alt="AmandaCake">
+          </div>
+          <div class="carousel-item">
+              <img src="logo4.jpg" alt="Angela">
+          </div>
+          <div class="carousel-item">
+            <img src="logo5.jpg" alt="KeepCalmo">
+        </div>
+      </div>
+      <!--Carousel Previous Next Controls-->
+      <a class="carousel-control-prev" href="#carouselExample" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExample" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+      </a>
+  </div>
+</div>
+</br>
+</br>
+</br>
+<form method="get"  action="C:/Users/Taking/Desktop/projeto/clientes.html">
+    <input type="submit" id="cadastrar" value="Cadastrar">
+</form>
+
+
+
+
+</form>
+
+
+
+</body>
+
+
+</html>

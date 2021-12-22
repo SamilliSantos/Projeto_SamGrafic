@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<style>
+body {
+  background-image: url("fundo.jpg");
+}
+</style>
+<center><img src="logo.png" height="300" width="300"></center>
+<title>Samgrafic Designer</title>
+
+<body>
+<center><h1> <font face="Verdana">Painel Administrativo</h1></center>
+<center>
+
+<label font face="Arial">Email:</label>
+<input type="text"></li></br></br>
+<label font face="Arial">Senha:</label>
+<input type="password"></li>
+</br></br>
+<center>
+<form method="get" action="C:/Users/Taking/Desktop/projeto/cadastro.html">
+    <input type="submit" value="Entrar">
+</form>
+</center>
+
+
+
+</form>
+
+<center>
+
+</body>
+
+
+</html>

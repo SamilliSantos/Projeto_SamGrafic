@@ -1,0 +1,50 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<style>
+body {
+  background-image: url("fundo2.jpg");
+}
+</style>
+<img src="logo.png" height="200" width="200">
+<title>Cadastro</title>
+
+<body>
+<center><h1> <font face="Verdana">Cadastro de Clientes</h1></center>
+<center>
+<hr size="5">
+<ul>
+<label font face="Arial">Nome:</label></li>
+<input type="text"></li>
+<label font face="Arial">Sobrenome:</label></li>
+<input type="text"></li></br></br>
+<hr size="5">
+<label font face="Arial">CPF:</label></li>
+<input type="text"></li>
+<label font face="Arial">Idade:</label></li>
+<input type="text"></li></br></br>
+<hr size="5">
+<label font face="Arial">Endereço:</label></li>
+<input type="text"></li>
+<label font face="Arial">Complemento:</label></li>
+<input type="text"></li>
+</ul>
+</br></br>
+
+<form method="get" action="C:/Users/Taking/Desktop/projeto/clientes.html">
+    <input type="submit" value="Cadastrar">
+</form>
+
+
+
+
+</form>
+
+
+
+</body>
+
+
+</html>
