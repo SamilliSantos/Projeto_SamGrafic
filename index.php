@@ -1,7 +1,4 @@
-?php>
 
-
-?>
 
 <html lang = "pt-br">
 <meta charset = "utf-8" />
@@ -17,7 +14,10 @@
 <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
+?php>
 
+
+?>
 <style>
 body {
   background-image: url("fundo.jpg");
