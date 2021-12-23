@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 
 
-=======
+<html lang = "pt-br">
+<meta charset = "utf-8" />
 ?php>
 
 
 ?>
-<<<<<<<< HEAD:index.php.txt
-
->>>>>>> 60229c0c43322e137ca02c777ec16b3484b412e0
-<html lang = "pt-br">
-<meta charset = "utf-8" />
-
 
   <!DOCTYPE html>
 
@@ -23,14 +17,7 @@
 <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
-<<<<<<< HEAD
-?php>
 
-
-?>
-=======
-
->>>>>>> 60229c0c43322e137ca02c777ec16b3484b412e0
 <style>
 body {
   background-image: url("fundo.jpg");
@@ -69,10 +56,4 @@ body {
 </body>
 
 
-<<<<<<< HEAD
 </html>
-=======
-</html>
-========
->>>>>>>> 60229c0c43322e137ca02c777ec16b3484b412e0:index.php
->>>>>>> 60229c0c43322e137ca02c777ec16b3484b412e0
